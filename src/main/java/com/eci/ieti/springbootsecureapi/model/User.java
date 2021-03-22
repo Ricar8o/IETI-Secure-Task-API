@@ -1,4 +1,4 @@
-package com.eci.cosw.springbootsecureapi.model;
+package com.eci.ieti.springbootsecureapi.model;
 
 /**
  * @author Santiago Carrillo

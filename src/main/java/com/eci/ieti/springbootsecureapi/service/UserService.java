@@ -1,8 +1,8 @@
-package com.eci.cosw.springbootsecureapi.service;
-
-import com.eci.cosw.springbootsecureapi.model.User;
+package com.eci.ieti.springbootsecureapi.service;
 
 import java.util.List;
+
+import com.eci.ieti.springbootsecureapi.model.User;
 
 /**
  * @author Santiago Carrillo

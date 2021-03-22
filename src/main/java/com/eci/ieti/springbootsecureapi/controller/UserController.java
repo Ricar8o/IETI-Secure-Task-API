@@ -1,7 +1,5 @@
-package com.eci.cosw.springbootsecureapi.controller;
+package com.eci.ieti.springbootsecureapi.controller;
 
-import com.eci.cosw.springbootsecureapi.model.User;
-import com.eci.cosw.springbootsecureapi.service.UserService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletException;
+
+import com.eci.ieti.springbootsecureapi.model.User;
+import com.eci.ieti.springbootsecureapi.service.UserService;
+
 import java.util.Date;
 
 /**

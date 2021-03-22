@@ -1,10 +1,12 @@
-package com.eci.cosw.springbootsecureapi.service;
+package com.eci.ieti.springbootsecureapi.service;
 
-import com.eci.cosw.springbootsecureapi.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+
+import com.eci.ieti.springbootsecureapi.model.User;
+
 import java.util.ArrayList;
 import java.util.List;
 

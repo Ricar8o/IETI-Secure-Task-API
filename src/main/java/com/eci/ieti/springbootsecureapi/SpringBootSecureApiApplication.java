@@ -1,6 +1,6 @@
-package com.eci.cosw.springbootsecureapi;
+package com.eci.ieti.springbootsecureapi;
 
-import com.eci.cosw.springbootsecureapi.config.JwtFilter;
+import com.eci.ieti.springbootsecureapi.config.JwtFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

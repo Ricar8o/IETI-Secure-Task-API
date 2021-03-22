@@ -1,4 +1,4 @@
-package com.eci.cosw.springbootsecureapi.config;
+package com.eci.ieti.springbootsecureapi.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

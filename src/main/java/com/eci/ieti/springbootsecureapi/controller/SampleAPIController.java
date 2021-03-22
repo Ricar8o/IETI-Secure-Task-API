@@ -1,4 +1,4 @@
-package com.eci.cosw.springbootsecureapi.controller;
+package com.eci.ieti.springbootsecureapi.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
