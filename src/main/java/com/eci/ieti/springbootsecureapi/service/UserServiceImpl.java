@@ -30,7 +30,7 @@ public class UserServiceImpl
     @PostConstruct
     private void populateSampleData()
     {
-        users.add( new User( "test@mail.com", "password", "Andres", "Perez" ) );
+        users.add( new User( "test@mail.com", "password", "Andres", "Perez", "xyz" ) );
     }
 
 
@@ -62,6 +62,16 @@ public class UserServiceImpl
     public User findUserByEmailAndPassword( String email, String password )
     {
         return users.get( 0 );
+    }
+
+    @Override
+    public User getUser(String username) {
+        for (User user : users) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null;
     }
 
 }

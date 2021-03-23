@@ -41,12 +41,12 @@ public class UserController
         String username = login.getUsername();
         String password = login.getPassword();
 
-        //TODO implement logic to verify user credentials
-        User user = userService.getUser( 0l );
+        
+        User user = userService.getUser( username );
 
         if ( user == null )
         {
-            throw new ServletException( "User username not found." );
+            throw new ServletException( "User " + username + " not found." );
         }
 
         String pwd = user.getPassword();

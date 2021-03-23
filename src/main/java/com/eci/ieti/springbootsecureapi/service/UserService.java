@@ -12,8 +12,10 @@ public interface UserService
 {
     List<User> getUsers();
 
-    User getUser( Long id );
+    User getUser( String username );
 
+    User getUser( Long id );
+    
     User createUser( User user );
 
     User findUserByEmail( String email );
