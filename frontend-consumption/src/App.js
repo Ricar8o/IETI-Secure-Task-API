@@ -45,8 +45,6 @@ class App extends Component {
     </div>
   );
 
-    
-
   render() {
       return (
           <div>
@@ -55,7 +53,7 @@ class App extends Component {
                         <Route path="/users" component={this.UserView}/>
                         <Route path="/tasks" component={this.TaskView}/>
                         <Route path="/main" component={this.MainView}/>   
-                        <Route exact path="/"> {localStorage.getItem('token') ? <Redirect to="/main" /> : <h1>Error</h1>}
+                        <Route exact path="/"> {localStorage.getItem('token') ? <Redirect to="/main" /> : <h1>Get a Token or refresh</h1>}
                         </Route> 
 
                     </div>
