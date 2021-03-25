@@ -9,6 +9,7 @@ import com.eci.ieti.springbootsecureapi.service.TaskService;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import com.google.gson.JsonArray;
@@ -39,12 +40,17 @@ public class TaskServiceImpl implements TaskService{
 
     @Override
     public Task createTask(Task task) {
-        RestTemplate restTemplate = new RestTemplate();
-        tasks.add(task);
-        HttpEntity<Task> request = new HttpEntity<>(task);
-        ResponseEntity<String> response = restTemplate.postForEntity(addTaskUrl, request, String.class);
-        JsonObject jObject = (JsonObject) JsonParser.parseString(response.getBody());
-        System.out.println(jObject);
+        try{
+            RestTemplate restTemplate = new RestTemplate();     
+            HttpEntity<Task> request = new HttpEntity<>(task);
+            ResponseEntity<String> response = restTemplate.postForEntity(addTaskUrl, request, String.class);
+            JsonObject jObject = (JsonObject) JsonParser.parseString(response.getBody());
+            System.out.println(jObject);
+            task.setDueDate(jObject.get("taskBody").getAsJsonObject().get("dueDate").getAsString());
+            tasks.add(task);
+        }catch (HttpClientErrorException e){
+            System.out.println(e.getMessage());
+        }
         return task;
     }
 
