@@ -1,7 +1,7 @@
 **NOTE**
 
 
-## Run Local
+## Run Backend
 
     cd spring-secure-api
     gradle bootRun
@@ -62,7 +62,7 @@
 
 
 
-# Test with simple React component 
+# Test React component 
 
     the connection may time out, if this happens refresh.
 
