@@ -1,6 +1,6 @@
 import React from 'react';
 import { UserItem } from './UserItem';
-import './User.css';
+import './Style.css';
 
 export class UserList extends React.Component{
 
