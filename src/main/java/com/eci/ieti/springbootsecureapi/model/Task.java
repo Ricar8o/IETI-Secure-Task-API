@@ -4,14 +4,14 @@ public class Task {
     
     private String description;
     private String status;
-    private String duedate;
+    private String dueDate;
     private String responsible;
     private String email;
 
-    public Task(String description, String status, String duedate, String responsible, String email) {
+    public Task(String description, String status, String dueDate, String responsible, String email) {
         this.description = description;
         this.status = status;
-        this.duedate = duedate;
+        this.dueDate = dueDate;
         this.responsible = responsible;
         this.email = email;
     }
@@ -33,12 +33,12 @@ public class Task {
         this.status = status;
     }
 
-    public String getDuedate() {
-        return this.duedate;
+    public String getDueDate() {
+        return this.dueDate;
     }
 
-    public void setDuedate(String duedate) {
-        this.duedate = duedate;
+    public void setDueDate(String duedate) {
+        this.dueDate = duedate;
     }
 
     public String getResponsible() {
@@ -62,7 +62,7 @@ public class Task {
         return "{" +
             " description='" + getDescription() + "'" +
             ", status='" + getStatus() + "'" +
-            ", duedate='" + getDuedate() + "'" +
+            ", dueDate='" + getDueDate() + "'" +
             ", responsible='" + getResponsible() + "'" +
             ", email='" + getEmail() + "'" +
             "}";

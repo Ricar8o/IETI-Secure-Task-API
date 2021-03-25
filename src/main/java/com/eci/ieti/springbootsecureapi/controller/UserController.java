@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.servlet.ServletException;
 
@@ -24,7 +25,8 @@ import java.util.List;
  * 8/21/17.
  */
 @RestController
-@RequestMapping( "user" )
+@RequestMapping( "/api/user" )
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController
 {
 
@@ -90,7 +92,7 @@ public class UserController
         }
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<User> getUsers(){
         return userService.getUsers();
     }
@@ -100,7 +102,7 @@ public class UserController
         return userService.getUser(id);
     }
 
-    @PostMapping("/")
+    @PostMapping
     public User createUser(@RequestBody User user){
         return userService.createUser(user);
     }
