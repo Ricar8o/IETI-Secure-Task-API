@@ -14,7 +14,6 @@ export class UserForm extends React.Component{
     handleSubmit(event) {
         // event.preventDefault();
 
-        
         if (!this.state.firstname.length || !this.state.lastname.length || !this.state.username.length || !this.state.email.length || !this.state.password.length){
             swal({
                 title: "Wrong Data",

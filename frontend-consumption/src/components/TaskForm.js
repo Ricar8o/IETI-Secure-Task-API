@@ -45,32 +45,25 @@ export class TaskForm extends React.Component{
                 icon: "error"
             })
         }else{
-            fetch('https://task-app-api.azurewebsites.net/api/add-task?code=qKsRlDPr4CTOxbjovixW1PDaTnWINmOQXJcYVaahS17gVdrxqYuEeQ==', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    description : this.state.description,
-                    status : this.state.status,
-                    dueDate : this.state.dueDate,
-                    responsible : this.state.responsible,
-                    email : this.state.email
+            this.props.axios.post('http://localhost:8080/api/task', {
+                description: this.state.description,
+                status: this.state.status,
+                dueDate: this.state.dueDate,
+                responsible: this.state.responsible,
+                email: this.state.email
+            })
+            .then(function (response) {
+                console.log(response.data);
+                swal({
+                    title: "Post Request Done :)",
+                    icon: "success"
                 })
             })
-            
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
+            .catch(function (error) {
+                console.log(error);
             });
-            swal({
-                title: "Post Request Done :)",
-                icon: "success"
-            })
         }
-      
-      event.preventDefault();
+        // event.preventDefault();
     }
 
     render(){
